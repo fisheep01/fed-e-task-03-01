@@ -15,15 +15,14 @@
 
 <body>
     <div id="app">
-        <h1>插值表达式</h1>
-        <h3>{{ msg }}</h3>
-        <h3>{{ count }}</h3>
-        <h1>v-text</h1>
-        <div v-text="msg"></div>
-        <h1>v-model</h1>
-        <input type="text" v-model="msg">
-        <input type="text" v-model="count">
-        <h1>{{dog}}</h1>
+      <h1 v-on:click="myClick">点击事件</h1>
+      <h3>{{ msg }}</h3>
+      <h1>v-text</h1>
+      <div v-text="msg"></div>
+      <h1 v-html='html'></h1>
+      <input type="text" v-model="msg">
+      <input type="text" v-model="count">
+      <h1>{{dog.name}}</h1>
     </div>
 </body>
 <script>
