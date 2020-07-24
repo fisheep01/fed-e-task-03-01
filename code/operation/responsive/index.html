@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mini Vue</title>
+    <script src="./vue/dep.js"></script>
+    <script src="./vue/watcher.js"></script>
+    <script src="./vue/compiler.js"></script>
+    <script src="./vue/observer.js"></script>
+    <script src="./vue/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h1>插值表达式</h1>
+        <h3>{{ msg }}</h3>
+        <h3>{{ count }}</h3>
+        <h1>v-text</h1>
+        <div v-text="msg"></div>
+        <h1>v-model</h1>
+        <input type="text" v-model="msg">
+        <input type="text" v-model="count">
+        <h1>{{dog}}</h1>
+    </div>
+</body>
+<script>
+    // let vm = new Vue({
+    //     el: '#app',
+    //     data: {
+    //         msg: 'hello Vue',
+    //         count: 100,
+    //         person: {
+    //             name: 'liuhuijun'
+    //         }
+    //     }
+    // })
+    // console.log(vm.msg)
+    // vm.msg = {
+    //     text: 'hello'
+    // }
+
+
+    let vm = new Vue({
+        el: '#app',
+        data: {
+            msg: 'object',
+            dog: {
+                name: undefined
+            }
+        },
+        method: {
+            clickHandler() {
+                this.dog
+                    // 该 name 属性是否是响应式的
+                this.$set(dog, name, 'Trump')
+            }
+        }
+    })
+    console.log(vm)
+    console.log(Vue)
+
+    setTimeout(() => {
+        Vue.set(vm.dog, 'name', 'Trump')
+    }, 2000);
+</script>
+
+</html>
