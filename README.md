@@ -59,3 +59,7 @@ vue的Diff算法是基于源码中的patch函数，该函数的作用是通过�
 - 进行oldStartVnode（oldVnode的第一个子节点）和newEndVnode（newVnode的最后一个子节点）的对比，如果为相同的节点则调用上述的更新逻辑，更新完成后将当前节点移动至oldVnode子节点中的第一个，并继续比对下一个oldVnode的子节点和上一个newVnode的子节点；若不是相同节点则执行下面的步骤
 - 进行oldEndtVnode（oldVnode的最后一个子节点）和newStartVnode（newVnode的第一个子节点）的对比，如果为相同的节点则调用上述的更新逻辑，更新完成后将当前节点移动至oldVnode子节点中的最后一个，并继续比对上一个oldVnode的子节点和下一个newVnode的子节点
 - 上述逻辑执行完后若oldVnode的子节点多余newVnode的子节点则删除多余的部分；若oldVnode的子节点少余newVnode的子节点则插入多余的部分
+
+
+## 编程题
+查看code/operation目录中代码
